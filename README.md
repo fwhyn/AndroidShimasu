@@ -1,0 +1,2 @@
+# AndroidShimasu
+A learning app
