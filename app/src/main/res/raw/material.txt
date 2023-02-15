@@ -1,0 +1,68 @@
+*** Application Fundamentals ***
+Android apps can be written using Kotlin, Java, and C++ languages
+
+*** Android App Extension:
+.apk -> can be installed directly by android device
+.aab -> contains the contents of an Android app project including some additional metadata that
+is not required at runtime. Google Play's servers generate optimized APKs that contain only the
+resources and code that are required by a particular device that is requesting installation of the
+app
+
+Android App Runs:
+- multi-user Linux system in which each app is a different user
+- each app a unique Linux user ID
+- Each process has its own virtual machine (VM)
+- By default, every app runs in its own Linux process
+
+More:
+- It's possible to arrange for two apps to share the same Linux user ID. The apps must also be
+signed with the same certificate
+- An app can request permission to access device data
+
+*** App components
+- Activities
+- Services
+- Broadcast receivers
+- Content providers
+
+** Activity
+An activity is the entry point for interacting with the user. It represents a single screen
+with a user interface
+
+** Service
+A service is a general-purpose entry point for keeping an app running in the background for all
+kinds of reasons
+ TODO please read more, difference between started and bound
+ TODO please make example module for started and bound services -> yelsa & mul
+
+** Broadcast receivers
+A broadcast receiver is a component that enables the system to deliver events to the app outside
+of a regular user flow, allowing the app to respond to system-wide broadcast announcements
+ TODO please make example module for Broadcast receivers -> luthfi
+
+** Content providers
+A content provider manages a shared set of app data that you can store in the file system, in a
+SQLite database, on the web, or on any other persistent storage location that your app can access
+ TODO please make example module for Content providers -> kholish
+
+*** Activating components
+Three of the four component types—activities, services, and broadcast receivers—are activated by
+an asynchronous message called an intent
+Unlike activities, services, and broadcast receivers, content providers are not activated by
+intents. Rather, they are activated when targeted by a request from a ContentResolver
+
+
+*** The manifest file
+Before the Android system can start an app component, the system must know that the component
+exists by reading the app's manifest file, AndroidManifest.xml
+
+** Declaring app requirements
+it's important that you clearly define a profile for the types of devices your app supports by
+declaring device and software requirements in your manifest file. Example: The values for
+minSdkVersion and targetSdkVersion are set in your app module's build.gradle
+
+*** App resources
+An Android app is composed of more than just code—it requires resources that are separate from
+the source code, such as images, audio files, and anything relating to the visual presentation of
+the app
+Example: logo.png (saved in the res/drawable/ directory)
