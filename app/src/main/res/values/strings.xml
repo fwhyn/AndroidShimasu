@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Android Shimasu</string>
+    <string name="element_text">Item</string>
+    <string name="test">Test</string>
+    <string name="module_list">Module List</string>
+    <string name="button">Button</string>
 </resources>
