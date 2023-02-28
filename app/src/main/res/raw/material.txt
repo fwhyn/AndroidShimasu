@@ -66,3 +66,39 @@ An Android app is composed of more than just code—it requires resources that a
 the source code, such as images, audio files, and anything relating to the visual presentation of
 the app
 Example: logo.png (saved in the res/drawable/ directory)
+
+*** App Resources ***
+
+** Grouping resource types
+Example:
+MyProject/
+    src/
+        MyActivity.java
+    res/
+        drawable/
+            graphic.png
+        layout/
+            main.xml
+            info.xml
+        mipmap/
+            icon.png
+        values/
+            strings.xml
+
+How to cal resources: R.<target folder>, example: R.drawable
+
+** Providing alternative resources
+<resources_name>-<qualifier>, example: values, values-ja
+
+** Handle configuration changes
+The restart behavior is designed to help your application adapt to new configurations by
+automatically reloading your application with alternative resources that match the new device
+configuration
+
+To properly handle a restart, it is important that your activity restores its previous state. You
+can use a combination of onSaveInstanceState(), ViewModel objects
+
+* Retain an object during a configuration change: using onSaveInstanceState() or ViewModel
+* Handle the configuration change yourself:
+example on android manifest: android:configChanges="orientation" (activity won't call onDestroy(),
+onCreate(), etc but we have to handle resources in onConfigurationChanged()
