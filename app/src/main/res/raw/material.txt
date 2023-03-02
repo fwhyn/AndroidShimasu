@@ -33,7 +33,7 @@ with a user interface
 A service is a general-purpose entry point for keeping an app running in the background for all
 kinds of reasons
  TODO please read more, difference between started and bound
- TODO please make example module for started and bound services -> yelsa & mul
+ TODO please make example module for started services -> & mul
 
 ** Broadcast receivers
 A broadcast receiver is a component that enables the system to deliver events to the app outside
@@ -102,3 +102,12 @@ can use a combination of onSaveInstanceState(), ViewModel objects
 * Handle the configuration change yourself:
 example on android manifest: android:configChanges="orientation" (activity won't call onDestroy(),
 onCreate(), etc but we have to handle resources in onConfigurationChanged()
+
+*** Ringkasan Pengenalan Android Studio ***
+- TODO apa itu namespace?
+
+** Ringkasan XML **
+- Self-closing tag
+- Opening tag dan closing tag
+
+penamaan file mengunakan snake_case, tidak bisa camelCase

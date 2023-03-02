@@ -25,6 +25,7 @@ public class BoundServiceMainActivity extends AppCompatActivity implements View.
         setContentView(R.layout.activity_main);
         mMediaPlayerIntent = new Intent(this, MediaPlayerService.class);
 
+        // TODO tambah comment maksudnya apa
         if(mMediaService == null){
             bindService(mMediaPlayerIntent, this, Context.BIND_AUTO_CREATE);
         }
@@ -75,7 +76,7 @@ public class BoundServiceMainActivity extends AppCompatActivity implements View.
     protected void onDestroy() {
         super.onDestroy();
         if(mMediaService != null) {
-            unbindService(this);
+//            unbindService(this);
         }
     }
 }

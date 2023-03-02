@@ -56,6 +56,7 @@ dependencies {
     // Dagger Hilt
     implementation "com.google.dagger:hilt-android:2.44.2"
     implementation project(path: ':servicetest')
+    implementation project(path: ':boundservice')
     kapt "com.google.dagger:hilt-android-compiler:$dagger_version"
 
     // ---------------- Test ----------------
