@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Started Service</string>
+    <string name="btn_start_service">Start Service</string>
+    <string name="btn_stop_service">Stop Service</string>
+    <string name="btn_about_service">About Services</string>
+    <string name="start_service">Start Service</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="my_service_started">My Service Started</string>
+    <string name="my_service_stopped">My Service Stopped</string>
+    <string name="my_service_created">My Service Created</string>
+    <string name="detail_started_service">A service becomes started only when an application component calls startService().</string>
+    <string name="detail_started_service1">Once this service starts, it runs in the background even if the component that created it destroys(run indefinitely). This service can be stopped only in one of the two cases:</string>
+    <string name="detail_started_service2">- By using the stopService() method.\n- By stopping itself using the stopSelf() method.</string>
+    <string name="detail_started_service3">There are two additional major modes of operation they can decide to run in, depending on the value they return from onStartCommand():</string>
+    <string name="start_sticky">START_STICKY</string>
+    <string name="start_sticky_detail">Used for services that are explicitly started and stopped as needed. If service is started with START_STICKY return type, it going to work in back ground even if activity is not foreground, if android forcefully closed service due to memory problem or some other cases, it will restart service without interaction of the user.</string>
+    <string name="not_start_sticky">START_NOT_STICKY or START_REDELIVER_INTENT</string>
+    <string name="not_start_sticky_detail">Used for services that should only remain running while processing any commands sent to them</string>
+    <string name="different_with_bound">The difference between Started and Bound Service</string>
+    <string name="bound_service">Bound Service</string>
+    <string name="detail_bound_service">A service is bound only if an application component binds to it using bindService(). When all clients unbind from bound service by calling unBindService() function, service ends with onUnbind onDestroy functions.</string>
+    <string name="different_started">- Just to accomplish task\n- Invoked by startService()\n- onBind() return null\n- Continue to run even if calling component is destroyed</string>
+    <string name="different_bound">- For long-standing connection\n- Invoked by bindService()\n- onBind() return iBinder\n- If calling component is destroyed then Bound Service is destroyed too</string>
+    <string name="service_lifecycle">Service Lifecycle</string>
+    <string name="onStartCommand">onStartCommand()</string>
+    <string name="onBind">onBind()</string>
+    <string name="onCreate">onCreate()</string>
+    <string name="onDestroy">onDestroy()</string>
+    <string name="onUnbind">onUnbind()</string>
+    <string name="onStartCommand_detail">Called by the system when another component wants to start a service using startService(). Once the system calls onStartCommand(), the service can run in the background for as long as it takes to complete. You need to remember to stop the service manually when the work is over by calling stopSelf() or stopService(). You don’t need this implementation if you only want to bind to the service without an option to start it.</string>
+    <string name="onBind_detail">The system invokes it when bindService() is called. Use it to bind another component to the service. It opens a communication, so you’ll provide an interface for the clients to communicate by returning IBinder. If you don’t want to use binding, just return null.</string>
+    <string name="onCreate_detail">Use this method to set up a service before it starts. The system invokes it only if the service isn’t running yet.</string>
+    <string name="onDestroy_detail">The system invoke this to destroy the service when it is not needed anymore. It’s the last call the service receives and it cleans up the resources or threads.</string>
+    <string name="onUnbind_detail">The system invokes this when all the clients disconnect from the interface published by the service.</string>
+
+</resources>

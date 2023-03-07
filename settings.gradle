@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "Android Shimasu"
 include ':app'
 include ':servicetest'
+include ':startedservice'
