@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GsuApp</string>
+    <string name="favorite">Favorit</string>
+    <string name="followers">Pengikut</string>
+    <string name="following">Mengikuti</string>
+    <string name="logo_git">logo git</string>
+    <string name="search_github_user_here">Cari user github di sini…</string>
+    <string name="header_text">tulisan atas</string>
+    <string name="user_avatar">foto user</string>
+    <string name="button_image_to_navigate_to_detail_page">tombol navigasi ke halaman detail</string>
+    <string name="setting">Pengaturan</string>
+    <string name="button_to_the_favorite_page">tombol untuk pindah ke halaman favorit</string>
+    <string name="user_photo_profil">foto profil user</string>
+    <string name="favorite_button">tombol favorit</string>
+    <string name="dots_separator">.</string>
+    <string name="adding_to_fav">ditambahkan ke favorit</string>
+    <string name="delete_from_fav">dihapus dari favorit</string>
+    <string name="set_reminder">reminder dipasang</string>
+    <string name="change_language">Ganti Bahasa</string>
+    <string name="github_search">Pengingat Pencarian Github</string>
+    <string name="alarm_message">Mari cari pengguna favorit kamu di Github</string>
+    <string name="repeating_on">"Alarm berulang dipasang. "</string>
+    <string name="repeating_off">Alarm berulang dibatalkan</string>
+    <string name="add_widget">tambah widget</string>
+    <string name="widget_disabled">widget di matikan</string>
+    <string name="widget_enabled">widget di aktifkan</string>
+    <string name="search">cari</string>
+    <string name="favorite_user">user favorit</string>
+</resources>
