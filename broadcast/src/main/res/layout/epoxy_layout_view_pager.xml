@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="adapter"
+            type="com.airbnb.epoxy.EpoxyController" />
+        <variable
+            name="listener"
+            type="com.luthtan.broadcast.feature.epoxy.EpoxyListener" />
+        <variable
+            name="position"
+            type="Integer" />
+    </data>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        epoxyController="@{adapter}"
+        listener="@{listener}"
+        position="@{position}"/>
+
+</layout>
