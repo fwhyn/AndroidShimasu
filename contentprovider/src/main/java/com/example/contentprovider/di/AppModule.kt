@@ -29,11 +29,17 @@ object AppModule {
     fun provideOkHttpClient() = if (BuildConfig.DEBUG) {
         OkHttpClient.Builder()
             .addInterceptor { chain ->
-                val origin = chain.request()
-                val requestBuilder = origin.newBuilder()
-                    .header("Authorization", API_KEY)
-                val request = requestBuilder.build()
-                chain.proceed(request)
+                try {
+                    val origin = chain.request()
+                    val requestBuilder = origin.newBuilder()
+                        .header("Authorization", API_KEY)
+                    val request = requestBuilder.build()
+                    chain.proceed(request)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    val origin = chain.request()
+                    chain.proceed(origin)
+                }
             }
             .connectTimeout(1, TimeUnit.MINUTES)
             .readTimeout(1, TimeUnit.MINUTES)

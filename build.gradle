@@ -2,7 +2,7 @@
 buildscript {
     ext.dagger_version = "2.44.2"
     ext.kotlin_version = "1.8.0"
-    ext.hilt_version = '2.33-beta'
+    ext.hilt_version = '2.44.2'
     ext.lottieVersion = "3.4.0"
 }
 
