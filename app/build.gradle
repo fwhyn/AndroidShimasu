@@ -50,19 +50,21 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.activity:activity-ktx:1.6.1'
 
+    // Module
+    implementation project(path: ':servicetest')
+    implementation project(path: ':boundservice')
+    implementation project(path: ':consumerapp')
+    implementation project(path: ':contentprovider')
+
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
 
     // Dagger Hilt
     implementation "com.google.dagger:hilt-android:2.44.2"
-    implementation project(path: ':servicetest')
-    implementation project(path: ':boundservice')
-    implementation project(path: ':consumerapp')
-    implementation project(path: ':contentprovider')
     kapt "com.google.dagger:hilt-android-compiler:$dagger_version"
 
     // ---------------- Test ----------------
-    // Junit
+    // JUnit
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
 
