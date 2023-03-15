@@ -10,8 +10,8 @@ import android.provider.Settings;
 import androidx.annotation.Nullable;
 
 public class MediaPlayerService extends Service {
-    // TODO Yelsa: lifecyclenya punya service sendiri atau nyambung ke aktivity?
-    // TODO Yelsa: cara stop dari activity lain?
+    // TODO Yelsa: lifecyclenya punya service sendiri atau nyambung ke aktivity? punya lifecycle sendiri
+    // TODO Yelsa: cara stop dari activity lain? see on StopServiceActivity
    private MediaPlayer mediaPlayer;
    private final IBinder mMediaPlayerBinder = new MediaPlayerBinder();
 
@@ -59,7 +59,7 @@ public class MediaPlayerService extends Service {
    public void onDestroy() {
       super.onDestroy();
       if(mediaPlayer != null) {
-//         mediaPlayer.stop();
+         mediaPlayer.stop();
       }
    }
 

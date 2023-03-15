@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.boundservice.MediaPlayerService.MediaPlayerService;
 
 public class BoundServiceMainActivity extends AppCompatActivity implements View.OnClickListener, ServiceConnection {
-    private Button mPlayBtn, mStopBtn, mPauseBtn;
+    private Button mPlayBtn, mStopBtn, mPauseBtn, mOpenActivityForstop;
     private MediaPlayerService mMediaService;
     private Intent mMediaPlayerIntent;
 
@@ -25,7 +25,9 @@ public class BoundServiceMainActivity extends AppCompatActivity implements View.
         setContentView(R.layout.activity_main);
         mMediaPlayerIntent = new Intent(this, MediaPlayerService.class);
 
-        // TODO tambah comment maksudnya apa
+        // TODO tambah comment maksudnya apa -> done
+        // Connects to MediaPlayerService, if it's null before / has disconnected
+        // BIND_AUTO_CREATE : automatically create the service as long as the binding exists.
         if(mMediaService == null){
             bindService(mMediaPlayerIntent, this, Context.BIND_AUTO_CREATE);
         }
@@ -33,10 +35,12 @@ public class BoundServiceMainActivity extends AppCompatActivity implements View.
         mPlayBtn = (Button) findViewById(R.id.play_media_btn);
         mPauseBtn = (Button) findViewById(R.id.pause_media_btn);
         mStopBtn = (Button) findViewById(R.id.stop_media_btn);
+        mOpenActivityForstop = (Button) findViewById(R.id.open_stop_activity_btn);
 
         mPlayBtn.setOnClickListener(this);
         mPauseBtn.setOnClickListener(this);
         mStopBtn.setOnClickListener(this);
+        mOpenActivityForstop.setOnClickListener(this);
 
     }
 
@@ -58,6 +62,8 @@ public class BoundServiceMainActivity extends AppCompatActivity implements View.
             mPlayBtn.setEnabled(true);
             mPauseBtn.setEnabled(true);
             Toast.makeText(this, "Stopping Media Player", Toast.LENGTH_LONG).show();
+        } else if(view.equals(mOpenActivityForstop)){
+            startActivity(new Intent(this, StopServiceActivity.class));
         }
 
     }
@@ -76,7 +82,7 @@ public class BoundServiceMainActivity extends AppCompatActivity implements View.
     protected void onDestroy() {
         super.onDestroy();
         if(mMediaService != null) {
-//            unbindService(this);
+            unbindService(this);
         }
     }
 }

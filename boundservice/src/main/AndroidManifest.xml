@@ -9,6 +9,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidShimasu">
         <activity
+            android:name=".StopServiceActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".BoundServiceMainActivity"
             android:exported="true">
             <intent-filter>
@@ -21,7 +28,8 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <service android:name=".MediaPlayerService.MediaPlayerService"></service>
+
+        <service android:name=".MediaPlayerService.MediaPlayerService" />
     </application>
 
 </manifest>
