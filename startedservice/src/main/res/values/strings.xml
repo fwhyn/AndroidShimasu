@@ -6,8 +6,9 @@
     <string name="start_service">Start Service</string>
     <string name="stop_service">Stop Service</string>
     <string name="my_service_started">My Service Started</string>
-    <string name="my_service_stopped">My Service Stopped</string>
-    <string name="my_service_created">My Service Created</string>
+    <string name="my_service_on_start_command">My Service onStartCommand</string>
+    <string name="my_service_stopped">My Service Stopped onDestroy</string>
+    <string name="my_service_created">My Service Created onCreated</string>
     <string name="detail_started_service">A service becomes started only when an application component calls startService().</string>
     <string name="detail_started_service1">Once this service starts, it runs in the background even if the component that created it destroys(run indefinitely). This service can be stopped only in one of the two cases:</string>
     <string name="detail_started_service2">- By using the stopService() method.\n- By stopping itself using the stopSelf() method.</string>
@@ -32,5 +33,6 @@
     <string name="onCreate_detail">Use this method to set up a service before it starts. The system invokes it only if the service isn’t running yet.</string>
     <string name="onDestroy_detail">The system invoke this to destroy the service when it is not needed anymore. It’s the last call the service receives and it cleans up the resources or threads.</string>
     <string name="onUnbind_detail">The system invokes this when all the clients disconnect from the interface published by the service.</string>
+    <string name="stop_service_from_other_activity">Stop Service from other Activity</string>
 
 </resources>

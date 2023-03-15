@@ -18,13 +18,13 @@ public class StartedServiceActivity extends Service {
     // Service Lifecycle #1 onCreate
     @Override
     public void onCreate() {
-        Toast.makeText(this, getString(R.string.my_service_created), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, getString(R.string.my_service_created), Toast.LENGTH_SHORT).show();
     }
 
     // Service Lifecycle #2 onStartCommand
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Toast.makeText(this, getString(R.string.my_service_started), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, getString(R.string.my_service_on_start_command), Toast.LENGTH_SHORT).show();
         // create media player which will play notification sound
         mediaPlayer = MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);
         // the audio on loop
@@ -39,9 +39,11 @@ public class StartedServiceActivity extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this, getString(R.string.my_service_stopped), Toast.LENGTH_LONG).show();
-        // stop the media player service
-        mediaPlayer.stop();
+        if (mediaPlayer != null){
+            Toast.makeText(this, getString(R.string.my_service_stopped), Toast.LENGTH_SHORT).show();
+            // stop the media player service
+            mediaPlayer.stop();
+        }
     }
 
     @Nullable

@@ -37,11 +37,11 @@ public class StartedServiceMainActivity extends AppCompatActivity implements Vie
     @Override
     public void onClick(View view) {
         if (view == startServiceButton) {
-            Toast.makeText(this, getString(R.string.start_service),Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.start_service),Toast.LENGTH_SHORT).show();
             startService(new Intent(this, StartedServiceActivity.class));
         }
         else if (view == stopServiceButton) {
-            Toast.makeText(this, getString(R.string.stop_service),Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.stop_service),Toast.LENGTH_SHORT).show();
             stopService(new Intent(this, StartedServiceActivity.class));
         }
         else if (view == aboutServiceButton) {
