@@ -43,7 +43,6 @@ of a regular user flow, allowing the app to respond to system-wide broadcast ann
 ** Content providers
 A content provider manages a shared set of app data that you can store in the file system, in a
 SQLite database, on the web, or on any other persistent storage location that your app can access
- TODO please make example module for Content providers -> kholish
 
 *** Activating components
 Three of the four component types—activities, services, and broadcast receivers—are activated by
