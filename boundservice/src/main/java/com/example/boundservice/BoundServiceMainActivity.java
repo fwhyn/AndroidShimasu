@@ -22,7 +22,7 @@ public class BoundServiceMainActivity extends AppCompatActivity implements View.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_bind);
         mMediaPlayerIntent = new Intent(this, MediaPlayerService.class);
 
         // TODO Yelsa: tambah comment maksudnya apa
@@ -30,9 +30,9 @@ public class BoundServiceMainActivity extends AppCompatActivity implements View.
             bindService(mMediaPlayerIntent, this, Context.BIND_AUTO_CREATE);
         }
 
-        mPlayBtn = (Button) findViewById(R.id.play_media_btn);
-        mPauseBtn = (Button) findViewById(R.id.pause_media_btn);
-        mStopBtn = (Button) findViewById(R.id.stop_media_btn);
+        mPlayBtn = findViewById(R.id.play_media_btn);
+        mPauseBtn = findViewById(R.id.pause_media_btn);
+        mStopBtn = findViewById(R.id.stop_media_btn);
 
         mPlayBtn.setOnClickListener(this);
         mPauseBtn.setOnClickListener(this);
