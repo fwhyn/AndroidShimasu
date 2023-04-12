@@ -55,6 +55,7 @@ dependencies {
     implementation project(path: ':boundservice')
     implementation project(path: ':consumerapp')
     implementation project(path: ':contentprovider')
+    implementation project(path: ':broadcast')
 
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"

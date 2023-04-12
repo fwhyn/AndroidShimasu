@@ -5,7 +5,6 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
 import android.content.pm.ServiceInfo
 import android.os.Build
 import android.util.Log
@@ -14,7 +13,6 @@ import androidx.work.CoroutineWorker
 import androidx.work.ForegroundInfo
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
-import com.luthtan.broadcast.BroadcastActivity
 import com.luthtan.broadcast.R
 import kotlinx.coroutines.delay
 
@@ -27,7 +25,7 @@ class DownloadWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(c
 
     override suspend fun doWork(): Result {
         Log.e("SHOW_BROADCAST", "DO WORK")
-        val appContext = applicationContext
+//        val appContext = applicationContext
 //        val filter = IntentFilter("com.example.broadcast.DOWNLOAD")
 //        applicationContext.registerReceiver(broadcast, filter)
         sendBroadcast("start")

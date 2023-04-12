@@ -38,7 +38,6 @@ kinds of reasons
 ** Broadcast receivers
 A broadcast receiver is a component that enables the system to deliver events to the app outside
 of a regular user flow, allowing the app to respond to system-wide broadcast announcements
- TODO please make example module for Broadcast receivers -> luthfi
 
 ** Content providers
 A content provider manages a shared set of app data that you can store in the file system, in a
