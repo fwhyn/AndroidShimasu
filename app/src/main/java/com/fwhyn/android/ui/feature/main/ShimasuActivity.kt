@@ -38,10 +38,12 @@ class ShimasuActivity : AppCompatActivity() {
             sdkList,
             clickListener = listClickListener
         )
+
         binding.mainList.run {
             layoutManager = LinearLayoutManager(this@ShimasuActivity)
             this.adapter = adapter
         }
+
         shimasuVm.sdk.observe(this) {
             sdkList.addAll(it)
             adapter.notifyItemChanged(0)
