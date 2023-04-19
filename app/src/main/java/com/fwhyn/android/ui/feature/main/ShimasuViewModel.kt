@@ -27,7 +27,7 @@ class ShimasuViewModel @Inject constructor(private val selectSdkUseCase: SelectS
         }
     }
 
-    fun getSdks() {
+    private fun getSdks() {
         _sdks.value = selectSdkUseCase.getSdks()
     }
 }
