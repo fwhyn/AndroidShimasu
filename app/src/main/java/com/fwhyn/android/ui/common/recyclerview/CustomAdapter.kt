@@ -9,7 +9,7 @@ import com.fwhyn.android.data.model.SdkModel
 import com.fwhyn.android.databinding.TextRowItemBinding
 
 class CustomAdapter(
-    private val dataSet: List<SdkModel>,
+    private val dataSet: ArrayList<SdkModel>,
     private val clickListener: (SdkModel) -> Unit,
 ) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
