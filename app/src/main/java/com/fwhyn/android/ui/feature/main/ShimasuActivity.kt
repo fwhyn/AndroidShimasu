@@ -18,7 +18,7 @@ class ShimasuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // set view / listener
+        // set view or listener
         val binding = ActivityShimasuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -26,6 +26,10 @@ class ShimasuActivity : AppCompatActivity() {
             Snackbar.make(binding.root, R.string.test, Snackbar.LENGTH_SHORT).show()
         }
 
+        setModuleList(binding)
+    }
+
+    private fun setModuleList(binding: ActivityShimasuBinding) {
         val sdkList = ArrayList<SdkModel>()
         val listClickListener: (SdkModel) -> Unit = {
             startActivity(Intent(this@ShimasuActivity, it.cls))
