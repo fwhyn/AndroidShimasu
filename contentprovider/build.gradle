@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace 'com.example.contentprovider'
-    compileSdk 33
+    compileSdk compile_sdk
 
     defaultConfig {
         minSdk 24

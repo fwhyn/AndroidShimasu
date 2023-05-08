@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace 'com.fwhyn.android'
-    compileSdk 33
+    compileSdk compile_sdk
 
     defaultConfig {
         applicationId "com.fwhyn.android"

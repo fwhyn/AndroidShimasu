@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.fwhyn.servicetest'
-    compileSdk 33
+    compileSdk compile_sdk
 
     defaultConfig {
         // applicationId "com.fwhyn.servicetest"

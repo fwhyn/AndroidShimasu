@@ -7,7 +7,7 @@ apply plugin: 'kotlin-kapt'
 
 android {
     namespace 'com.luthtan.broadcast'
-    compileSdk 33
+    compileSdk compile_sdk
 
     defaultConfig {
         minSdk 21
