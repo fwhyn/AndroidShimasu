@@ -8,10 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.fwhyn.fragmentmatter.R
 
-class FragmentationFragment : Fragment() {
+class OthersFragment : Fragment() {
 
     companion object {
-        fun newInstance() = FragmentationFragment()
+        fun newInstance() = OthersFragment()
     }
 
     private lateinit var viewModel: FragmentationViewModel
@@ -26,7 +26,7 @@ class FragmentationFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_fragmentation, container, false)
+        return inflater.inflate(R.layout.fragment_others, container, false)
     }
 
 }
