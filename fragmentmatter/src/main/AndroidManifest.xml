@@ -8,16 +8,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidShimasu">
+
         <activity
-            android:name=".FragmentMatterActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AndroidShimasu">
+            android:name=".ui.fragmentation.FragmentationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.main.FragmentMatterActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
