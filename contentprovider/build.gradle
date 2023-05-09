@@ -49,7 +49,7 @@ dependencies {
     implementation 'com.github.yogacp:android-viewbinding:1.0.2'
     implementation "androidx.preference:preference-ktx:1.2.0"
     implementation "io.coil-kt:coil:1.1.1"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_plugin_version"
 
     // ViewModel - LiveData
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
