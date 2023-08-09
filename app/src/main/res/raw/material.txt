@@ -109,3 +109,10 @@ onCreate(), etc but we have to handle resources in onConfigurationChanged()
 - Opening tag dan closing tag
 
 penamaan file mengunakan snake_case, tidak bisa camelCase
+
+*** Devices Compatibility ***
+** Support Different Pixel Densities **
+- Use dp for layout sizes
+- Use sp for text
+- Never use sp for layout sizes
+
