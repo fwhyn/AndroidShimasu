@@ -116,3 +116,27 @@ penamaan file mengunakan snake_case, tidak bisa camelCase
 - Use sp for text
 - Never use sp for layout sizes
 
+*** App Architecture
+    ** Mobile app user experiences
+        Given the conditions of this environment, it's possible for your app components to be launched individually and
+        out-of-order, and the operating system or user can destroy them at any time. Because these events aren't under
+        your control, you shouldn't store or keep in memory any application data or state in your app components, and
+        your app components shouldn't depend on each other.
+
+        * Separation of concerns
+            t's a common mistake to write all your code in an Activity or a Fragment. These UI-based classes should only
+            contain logic that handles UI and operating system interactions.
+        * Single source of truth
+            - It centralizes all the changes to a particular type of data in one place.
+            - It protects the data so that other types cannot tamper with it.
+            - It makes changes to the data more traceable. Thus, bugs are easier to spot.
+    ** Recommended app architecture
+        * Modern App Architecture
+            - A reactive and layered architecture.
+            - Unidirectional Data Flow (UDF) in all layers of the app.
+            - A UI layer with state holders to manage the complexity of the UI.
+            - Coroutines and flows.
+            - Dependency injection best practices.
+    ** UI layer
+
+
